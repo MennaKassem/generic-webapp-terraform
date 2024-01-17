@@ -69,7 +69,20 @@ resource "google_cloud_run_v2_service" "frontend_app" {
       }
       egress = "ALL_TRAFFIC"
     }
+    # Set resource limits for the container
+    resources {
+      limits = {
+        cpu    = "1"
+        memory = "256Mi"
+      }
+    }
   }
+  # Ensure the service scales up to a maximum of 5 instances based on request load
+  autoscaling {
+    min_instances = 1
+    max_instances = 5
+  }
+
   depends_on = [google_compute_forwarding_rule.forwarding_rule_backend, google_project_service.cloudrun_api]
 }
 
