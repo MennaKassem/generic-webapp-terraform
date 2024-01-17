@@ -70,9 +70,17 @@ resource "google_cloud_run_v2_service" "backend_app" {
   }
 
   template {
+    scaling {
+      max_instance_count = 5
+    }
     containers {
       // Git repository: https://github.com/MennaKassem/generic-webapp-backend
       image = "${var.repo_name}/${local.backend_app_name}:latest"
+      resources {
+        limits = {
+          cpu    = "1"
+          memory = "256Mi"
+        }
       ports {
         container_port = 8080
       }
