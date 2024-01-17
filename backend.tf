@@ -75,7 +75,7 @@ resource "google_cloud_run_v2_service" "backend_app" {
     }
     containers {
       // Git repository: https://github.com/MennaKassem/generic-webapp-backend
-      image = "${var.repo_name}/${local.backend_app_name}:latest"
+      image = "gcr.io/${var.project_id}/webapp-backend"
       resources {
         limits = {
           cpu    = "1"

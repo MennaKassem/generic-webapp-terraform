@@ -55,7 +55,7 @@ resource "google_cloud_run_v2_service" "frontend_app" {
     }
     containers {
       // Git repository: https://github.com/MennaKassem/generic-webapp-frontend
-      image = "${var.repo_name}/${local.frontend_app_name}:latest"
+      image = "gcr.io/${var.project_id}/webapp-frontend"
       resources {
         limits = {
           cpu    = "1"
