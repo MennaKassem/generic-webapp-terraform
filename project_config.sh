@@ -41,7 +41,7 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 
 # Checkout terraform projects
 rm -rf ~/generic-webapp-terraform
-git clone https://github.com/silvermx/generic-webapp-terraform.git
+git clone https://github.com/MennaKassem/generic-webapp-terraform.git
 
 # Set project id at the terraform projects
 sed -i "s|<PROYECT_ID>|${PROJECT_ID}|" ~/generic-webapp-terraform/variables.tf

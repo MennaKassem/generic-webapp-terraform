@@ -50,5 +50,5 @@ Once the deployment is complete, you can access the website by accessing the fro
 
 
 ### Support
-If you have any questions or problems with this Terraform project, please feel free to open an issue on GitHub (https://github.com/silvermx).
+If you have any questions or problems with this Terraform project, please feel free to open an issue on GitHub (https://github.com/MennaKassem).
 

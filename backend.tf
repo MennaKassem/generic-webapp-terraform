@@ -71,7 +71,7 @@ resource "google_cloud_run_v2_service" "backend_app" {
 
   template {
     containers {
-      // Git repository: https://github.com/silvermx/generic-webapp-backend
+      // Git repository: https://github.com/MennaKassem/generic-webapp-backend
       image = "${var.repo_name}/${local.backend_app_name}:latest"
       ports {
         container_port = 8080

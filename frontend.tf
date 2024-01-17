@@ -51,7 +51,7 @@ resource "google_cloud_run_v2_service" "frontend_app" {
   ingress      = "INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER"
   template {
     containers {
-      // Git repository: https://github.com/silvermx/generic-webapp-frontend
+      // Git repository: https://github.com/MennaKassem/generic-webapp-frontend
       image = "${var.repo_name}/${local.frontend_app_name}:latest"
       ports {
         container_port = 8080
