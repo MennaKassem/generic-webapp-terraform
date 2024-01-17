@@ -38,6 +38,9 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member="serviceAccount:terraform@$PROJECT_ID.iam.gserviceaccount.com" \
     --role="roles/serviceusage.serviceUsageAdmin"
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member="serviceAccount:terraform@$PROJECT_ID.iam.gserviceaccount.com"  \
+  --role "roles/storage.admin"
 
 # Checkout terraform projects
 rm -rf ~/generic-webapp-terraform

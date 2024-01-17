@@ -4,7 +4,7 @@ resource "google_sql_database_instance" "instance" {
   region           = var.region
   database_version = "POSTGRES_14"
   settings {
-    tier              = "db-n1-standard-2"
+    tier              = "db-f1-micro"
     availability_type = "ZONAL"
   }
   //Allow to destroy the db only for testing (false)
