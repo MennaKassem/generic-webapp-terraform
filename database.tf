@@ -2,7 +2,7 @@
 resource "google_sql_database_instance" "instance" {
   name             = local.db_instance_name
   region           = var.region
-  database_version = "POSTGRES_14"
+  database_version = "MYSQL_5_7"
   settings {
     tier              = "db-f1-micro"
     availability_type = "ZONAL"
